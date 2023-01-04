@@ -30,12 +30,6 @@ export default function TextForm(props) {
         navigator.clipboard.writeText(copyText);
         props.showAlert("Copied To ClipBoard","success");
     }
-    const numChars = (text)=>{
-        return text.length;
-    }
-    const numWords = (text)=>{
-        return text.split(' ').length;
-    }
   return (
     <>
       <div className="container">
@@ -61,7 +55,7 @@ export default function TextForm(props) {
         <button type="button" className="btn btn-primary mx-2" onClick={boldHandler}>Bold</button>
         <button type="button" className="btn btn-primary" onClick={italicHandler}>Italic</button> 
         <div className = "my-2" >
-        <strong style = {{color : props.mode == 'light'?'black':'white'}}>{numChars(text)} letters, {numWords(text)} words</strong>
+        <strong style = {{color : props.mode === 'light'?'black':'white'}}>{text.length} letters, {text.split(" ").filter((element)=>{return element.length !== 0}).length} words</strong>
         </div>
       </div>
       </div>
