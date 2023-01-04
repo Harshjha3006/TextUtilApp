@@ -56,7 +56,7 @@ export default function TextForm(props) {
         <button type="button" disabled = {text.length === 0} className="btn btn-primary mx-2 my-2" onClick={boldHandler}>Bold</button>
         <button type="button" disabled = {text.length === 0} className="btn btn-primary" onClick={italicHandler}>Italic</button> 
         <div className = "my-2" >
-        <strong style = {{color : props.mode === 'light'?'black':'white'}}>{text.length} letters, {text.split(" ").filter((element)=>{return element.length !== 0}).length} words</strong>
+        <strong style = {{color : props.mode === 'light'?'black':'white'}}>{text.length} letters, {text.split(/\s+/).filter((element)=>{return element.length !== 0}).length} words</strong>
         </div>
       </div>
       </div>
