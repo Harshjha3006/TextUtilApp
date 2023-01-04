@@ -40,7 +40,8 @@ export default function TextForm(props) {
           id="exampleFormControlTextarea1"
           style = {{
             border : "1px solid black",
-            backgroundColor : props.mode === 'light'?'white':'grey',
+            backgroundColor : props.mode === 'light'?'white':'#13466e',
+            color : props.mode == 'dark'?'white':'black',
             fontStyle : italic?'italic':'normal',
             fontWeight : bold?'bold':'normal'
         }}
