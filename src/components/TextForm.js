@@ -49,10 +49,10 @@ export default function TextForm(props) {
           rows="8"
         ></textarea>
         <button type="button" className="btn btn-primary my-2 mx-2" onClick = {lcase}>Convert To lowercase</button>
-        <button type="button" className="btn btn-primary mx-2"onClick = {ucase}>Convert To Uppercase</button>
-        <button type="button" className="btn btn-primary mx-2" onClick = {clear}>Clear</button>
-        <button type="button" className="btn btn-primary mx-2"onClick = {copy}>Copy</button>
-        <button type="button" className="btn btn-primary mx-2" onClick={boldHandler}>Bold</button>
+        <button type="button" className="btn btn-primary mx-2 my-2"onClick = {ucase}>Convert To Uppercase</button>
+        <button type="button" className="btn btn-primary mx-2 my-2" onClick = {clear}>Clear</button>
+        <button type="button" className="btn btn-primary mx-2 my-2"onClick = {copy}>Copy</button>
+        <button type="button" className="btn btn-primary mx-2 my-2" onClick={boldHandler}>Bold</button>
         <button type="button" className="btn btn-primary" onClick={italicHandler}>Italic</button> 
         <div className = "my-2" >
         <strong style = {{color : props.mode === 'light'?'black':'white'}}>{text.length} letters, {text.split(" ").filter((element)=>{return element.length !== 0}).length} words</strong>
